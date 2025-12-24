@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ARA</title>
+    <!-- Carrega Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Configuração do Tailwind para usar a fonte Inter e cores customizadas -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary-blue': '#1a73e8',
+                        'dark-bg': '#1f2937',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <!-- Importa Font Awesome para os ícones das redes sociais -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        xintegrity="sha512-SnH5WK+bZxgPHs44uWIX+LLMDJzL/Kz9zzT/uQ4f7tS8z0N10+7dYg+b3Z8Q5hN9t+b3f+I5G5Z5L5L5L5L5Lw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        /* Estilo para a animação do tooltip */
+        .tooltip-container {
+            position: relative;
+            display: inline-block;
+        }
+
+        .tooltip-text {
+            visibility: hidden;
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            border-radius: 6px;
+            padding: 5px 10px;
+            position: absolute;
+            z-index: 10;
+            bottom: 125%;
+            /* Posição acima do ícone */
+            left: 50%;
+            transform: translateX(-50%);
+            opacity: 0;
+            transition: opacity 0.3s, visibility 0.3s;
+            white-space: nowrap;
+            font-size: 0.75rem;
+            /* texto pequeno */
+        }
+
+        .tooltip-container:hover .tooltip-text {
+            visibility: visible;
+            opacity: 1;
+        }
+
+        /* Estilo base do ícone com hover de cor */
+        .social-icon {
+            transition: all 0.3s ease-in-out;
+            @apply text-white bg-gray-700 hover:scale-110 shadow-lg p-3 rounded-full;
+        }
+
+        /* Cores específicas no hover para visual moderno */
+        .fa-facebook-f:hover {
+            color: #1877f2;
+            @apply bg-white;
+        }
+
+        .fa-whatsapp:hover {
+            color: #25d366;
+            @apply bg-white;
+        }
+
+        .fa-instagram:hover {
+            color: #E1306C;
+            @apply bg-white;
+        }
+
+        .fa-linkedin-in:hover {
+            color: #0A66C2;
+            @apply bg-white;
+        }
+    </style>
+</head>
+
+<body class="min-h-screen flex flex-col font-sans bg-gray-100">
+
+    <!-- Conteúdo Principal Mockup para Visualização -->
+    <main class="flex-grow p-8">
+        <h1 class="text-3xl font-bold text-gray-800 mb-4">Seção Principal do Site</h1>
+        <p class="text-gray-600">Este é um conteúdo de exemplo para demonstrar o rodapé na parte inferior da página.</p>
+        <!-- Adiciona um pouco de espaço para forçar o footer para baixo em telas maiores -->
+        <div class="h-64 sm:h-96"></div>
+    </main>
+
+    <!-- INÍCIO DO RODAPÉ (FOOTER) -->
+    <footer class="bg-dark-bg text-white py-10 shadow-inner mt-auto">
+        <div class="container mx-auto px-4">
+
+            <!-- Linha principal do rodapé (Responsivo: Centralizado em móvel, com espaço em desktop) -->
+            <div
+                class="flex flex-col md:flex-row justify-between items-center text-center md:text-left border-b border-gray-700 pb-6 mb-6">
+
+                <!-- Logo ou Nome da Empresa -->
+                <div class="mb-4 md:mb-0">
+                    <h2 class="text-2xl font-extrabold text-primary-blue">
+                        <i class="fas fa-code text-white mr-2"></i>Seu Projeto Web
+                    </h2>
+                    <p class="text-sm text-gray-400 mt-1">Conectando você ao mundo digital.</p>
+                </div>
+
+                <!-- Ícones de Redes Sociais (Obrigatório: Centralização e espaçamento responsivo) -->
+                <div class="flex space-x-6 justify-center">
+
+                    <!-- Facebook -->
+                    <div class="tooltip-container">
+                        <a href="https://www.facebook.com/seuperfil" target="_blank" aria-label="Acesse nosso Facebook"
+                            class="social-icon">
+                            <i class="fab fa-facebook-f text-lg"></i>
+                        </a>
+                        <span class="tooltip-text">Curta nossa página no Facebook!</span>
+                    </div>
+
+                    <!-- WhatsApp -->
+                    <div class="tooltip-container">
+                        <a href="https://wa.me/5511999999999" target="_blank" aria-label="Fale conosco pelo WhatsApp"
+                            class="social-icon">
+                            <i class="fab fa-whatsapp text-lg"></i>
+                        </a>
+                        <span class="tooltip-text">Envie uma mensagem via WhatsApp</span>
+                    </div>
+
+                    <!-- Instagram -->
+                    <div class="tooltip-container">
+                        <a href="https://www.instagram.com/seuperfil" target="_blank" aria-label="Siga-nos no Instagram"
+                            class="social-icon">
+                            <i class="fab fa-instagram text-lg"></i>
+                        </a>
+                        <span class="tooltip-text">Acompanhe nossas novidades no Instagram</span>
+                    </div>
+
+                    <!-- LinkedIn -->
+                    <div class="tooltip-container">
+                        <a href="https://www.linkedin.com/in/seuperfil" target="_blank"
+                            aria-label="Conecte-se conosco no LinkedIn" class="social-icon">
+                            <i class="fab fa-linkedin-in text-lg"></i>
+                        </a>
+                        <span class="tooltip-text">Conecte-se no nosso LinkedIn profissional</span>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Direitos Autorais e Navegação Rápida (Exemplo) -->
+            <div class="text-center text-gray-500 text-sm">
+                <p>&copy; 2025 Seu Projeto Web. Todos os direitos reservados.</p>
+                <div class="mt-2 space-x-4">
+                    <a href="#" class="hover:text-primary-blue transition">Política de Privacidade</a>
+                    <span class="text-gray-600">|</span>
+                    <a href="#" class="hover:text-primary-blue transition">Termos de Uso</a>
+                </div>
+            </div>
+
+        </div>
+    </footer>
+    <!-- FIM DO RODAPÉ -->
+
+</body>
+
+</html>
