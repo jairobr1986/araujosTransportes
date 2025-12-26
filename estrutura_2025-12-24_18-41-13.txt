@@ -1,0 +1,33 @@
+araujosTransportes/
+├── .gitattributes
+├── .gitignore
+├── LICENSE
+├── estrutura_2025-12-24_18-41-13.txt
+└── siteAraujo
+    ├── ARAUJO.txt
+    ├── assets
+    │   ├── css
+    │   │   └── style.css
+    │   ├── img
+    │   │   ├── araLogo.png
+    │   │   ├── logo.png
+    │   │   └── oficial.png
+    │   └── js
+    ├── gerador_de_estrutura.py
+    ├── imagens sem tratamentos
+    │   ├── ChatGPT Image 19 de dez. de 2025, 13_33_05.png
+    │   ├── ChatGPT Image 19 de dez. de 2025, 13_35_09.png
+    │   ├── ChatGPT Image 19 de dez. de 2025, 13_46_30.png
+    │   ├── ChatGPT Image 19 de dez. de 2025, 13_46_36.png
+    │   ├── ChatGPT Image 19 de dez. de 2025, 13_47_25.png
+    │   ├── ChatGPT Image 19 de dez. de 2025, 13_50_23.png
+    │   ├── ChatGPT Image 19 de dez. de 2025, 13_57_31.png
+    │   ├── Gemini_Generated_Image_9ostao9ostao9ost.png
+    │   ├── Gemini_Generated_Image_fpm82hfpm82hfpm8.png
+    │   ├── Gemini_Generated_Image_mmkxogmmkxogmmkx.png
+    │   ├── Gemini_Generated_Image_pgjn9jpgjn9jpgjn.png
+    │   ├── Gemini_Generated_Image_t5jp8ut5jp8ut5jp.png
+    │   └── Gemini_Generated_Image_xgymdqxgymdqxgym.png
+    ├── index.html
+    ├── index2.html
+    └── readme.txt
