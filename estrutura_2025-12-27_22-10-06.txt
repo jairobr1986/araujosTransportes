@@ -1,0 +1,689 @@
+araujosTransportes/
+├── .gitattributes
+├── .gitignore
+├── ARAUJO.txt
+├── LICENSE
+├── assets
+│   ├── css
+│   │   └── styles.css
+│   ├── img
+│   │   ├── araAzul.png
+│   │   ├── araCoca.png
+│   │   ├── araDupla.jpg
+│   │   ├── araLogo.png
+│   │   ├── araSoloAzul.jpg
+│   │   ├── araSoloCoca.jpg
+│   │   ├── bg-desktop-light.jpg
+│   │   ├── bg-desktop.jpg
+│   │   ├── bg-mobile-light.jpg
+│   │   ├── bg-mobile.jpg
+│   │   ├── github-jairo.jpg
+│   │   ├── logo.png
+│   │   ├── oficial.png
+│   │   ├── oficial2.jpg
+│   │   ├── perfil.jpg
+│   │   └── redOficial.jpg
+│   └── js
+│       └── script.js
+├── contato.html
+├── estrutura_2025-12-27_22-10-06.txt
+├── gerador_de_estrutura.py
+├── history.html
+├── index.html
+└── readme.txt
+
+Estou montando o projeto com diversas paginas que tenho, porém agora está dando conflito, consegue me ajudar?
+
+C:\Users\jairo\OneDrive\Documentos\GitHub\araujosTransportes\index.html
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Araújo Transportes | Transporte Seguro e Confiável</title>
+  <meta name="description"
+    content="Araújo Transportes oferece soluções em transporte e logística com segurança, agilidade e confiança.">
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            redMain: '#E53935',
+            redDark: '#C62828',
+            blackMain: '#111111',
+            grayText: '#333333',
+            grayBg: '#F5F5F5'
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+  <!-- CSS do projeto -->
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<body class="text-grayText bg-white">
+
+  <!-- ================= HEADER / MENU ================= -->
+  <header class="bg-redMain text-white fixed top-0 left-0 w-full z-50 shadow">
+    <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+
+      <!-- Logo -->
+      <img src="assets/img/araLogo.png" alt="Araújo Transportes" class="logo-site">
+
+      <!-- Menu Desktop -->
+      <nav class="hidden md:flex gap-8 font-semibold">
+        <a href="#home" class="hover:text-gray-200">Home</a>
+        <a href="#sobre" class="hover:text-gray-200">Sobre</a>
+        <a href="contato.html" class="hover:text-gray-200">Contato</a>
+      </nav>
+
+      <!-- Botão Hamburger -->
+      <button id="menu-btn" class="md:hidden text-2xl">
+        <i class="fas fa-bars"></i>
+      </button>
+
+    </div>
+
+    <!-- Menu Mobile -->
+    <div id="menu-mobile" class="hidden bg-redDark md:hidden">
+      <nav class="flex flex-col text-center py-4 gap-4 font-semibold">
+        <a href="#home" class="hover:text-gray-200">Home</a>
+        <a href="#sobre" class="hover:text-gray-200">Sobre</a>
+        <a href="#contato" class="hover:text-gray-200">Contato</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Espaço por causa do menu fixo -->
+  <div class="h-20"></div>
+
+  <!-- ================= HERO ================= -->
+  <section id="home" class="bg-redMain text-white">
+    <div class="max-w-7xl mx-auto px-6 py-16 grid md:grid-cols-2 gap-10 items-center">
+
+      <div>
+        <h1 class="text-4xl md:text-5xl font-extrabold mb-4">
+          Transporte com segurança e confiança
+        </h1>
+
+        <p class="text-lg mb-6">
+          Conectando sua carga ao destino certo com agilidade e responsabilidade.
+        </p>
+
+        <a href="#contato"
+          class="inline-block bg-white text-redMain font-bold px-6 py-3 rounded hover:bg-gray-100 transition">
+          Solicitar orçamento
+        </a>
+      </div>
+
+      <!-- Imagem controlada por CSS -->
+      <div class="hero-image">
+        <img src="assets/img/oficial2.jpg" alt="Frota da Araújo Transportes">
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= SOBRE ================= -->
+  <section id="sobre" class="bg-grayBg py-16">
+    <div class="max-w-5xl mx-auto px-6 text-center">
+      <h2 class="text-3xl font-bold mb-4">Sobre a Araújo Transportes</h2>
+      <p class="text-lg">
+        Com anos de experiência no setor de transporte, oferecemos soluções eficientes,
+        seguras e pontuais para nossos clientes.
+      </p>
+    </div>
+  </section>
+
+  <!-- ================= CONTATO ================= -->
+  <section id="contato" class="py-16">
+    <div class="max-w-5xl mx-auto px-6 text-center">
+
+      <h2 class="text-3xl font-bold mb-6">Entre em contato</h2>
+
+      <p class="mb-6">
+        Solicite seu orçamento diretamente pelo WhatsApp.
+      </p>
+
+      <a href="https://wa.me/5599999999999"
+        class="inline-flex items-center gap-3 bg-green-500 text-white px-6 py-3 rounded font-bold hover:bg-green-600 transition">
+        <i class="fab fa-whatsapp text-xl"></i>
+        WhatsApp
+      </a>
+
+    </div>
+  </section>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="bg-blackMain text-white">
+    <div class="max-w-7xl mx-auto px-6 py-10 grid md:grid-cols-3 gap-8 text-center md:text-left">
+
+      <div>
+        <img src="assets/img/araLogo.png" class="logo-site mb-4 mx-auto md:mx-0" alt="">
+        <p class="text-sm text-gray-400">
+          Transporte seguro, rápido e eficiente.
+        </p>
+      </div>
+
+      <nav>
+        <ul class="space-y-2">
+          <li><a href="#home" class="hover:text-redMain">Home</a></li>
+          <li><a href="#sobre" class="hover:text-redMain">Sobre</a></li>
+          <li><a href="#contato" class="hover:text-redMain">Contato</a></li>
+        </ul>
+      </nav>
+
+      <div>
+        <p class="mb-3 font-semibold">Redes sociais</p>
+
+        <div class="flex justify-center md:justify-start gap-4">
+
+
+          <a href="https://wa.me/5599999999999" target="_blank" rel="noopener noreferrer"
+            class="social-icon whatsapp tooltip-container" aria-label="WhatsApp">
+            <i class="fab fa-whatsapp"></i>
+            <span class="tooltip-text">WhatsApp</span>
+          </a>
+
+          <a href="https://www.instagram.com/seuusuario" target="_blank" rel="noopener noreferrer"
+            class="social-icon instagram tooltip-container" aria-label="Instagram">
+            <i class="fab fa-instagram"></i>
+            <span class="tooltip-text">Instagram</span>
+          </a>
+
+          <a href="https://www.facebook.com/suapagina" target="_blank" rel="noopener noreferrer"
+            class="social-icon facebook tooltip-container" aria-label="Facebook">
+            <i class="fab fa-facebook-f"></i>
+            <span class="tooltip-text">Facebook</span>
+          </a>
+
+
+        </div>
+      </div>
+
+    </div>
+
+    <div class="text-center text-gray-500 text-sm py-4 border-t border-gray-700">
+      © 2025 Araújo Transportes. Todos os direitos reservados.
+    </div>
+  </footer>
+
+  <!-- ================= JS MENU ================= -->
+  <script>
+    const btn = document.getElementById('menu-btn');
+    const menu = document.getElementById('menu-mobile');
+
+    btn.addEventListener('click', () => {
+      menu.classList.toggle('hidden');
+    });
+  </script>
+
+</body>
+
+</html>
+
+C:\Users\jairo\OneDrive\Documentos\GitHub\araujosTransportes\contato.html
+<!DOCTYPE html>
+<html lang="pt-br" class="">
+
+<head>
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+    rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>jairobr1986</title>
+
+</head>
+
+<body>
+  <!-- Abaixo imagem com a foto do perfil -->
+  <div id="container">
+    <div id="profile">
+      <img src="./assets/img/github-jairo.jpg" alt="Foto do perfil do jairobr1986">
+      <p>@jairobr1986</p>
+    </div>
+    <!-- Acima imagem com a foto do perfil -->
+
+    <!-- Abaixo Botão de troca de ligth x dark -->
+    <div id="switch" onclick="toggMode()">
+      <button></button>
+      <span></span>
+    </div>
+    <!-- Acima Botão de troca de ligth x dark -->
+
+    <ul>
+      <li>
+        <a href="https://www.linkedin.com/in/jairobr1986/" target="_blank" rel="noopener noreferrer">Me siga no
+          LinkendIn</a>
+      </li>
+
+      <li>
+        <a href="https://api.whatsapp.com/send?phone=5519993515497&text=Olá, Obrigado por visitar meu projeto. "
+          target="_blank" rel="noopener noreferrer">WhastApp</a>
+      </li>
+
+      <li>
+        <a href="https://numerosecretoalura2025.vercel.app/" target="_blank" rel="noopener noreferrer"> Projeto
+          Alura</a>
+      </li>
+
+      <li>
+        <a href="https://www.instagram.com/jairo.work/" target="_blank" rel="noopener noreferrer">Meu Instagram</a>
+      </li>
+    </ul>
+
+    <div id="social-links">
+      <a href="https://www.linkedin.com/in/jairobr1986/" target="_blank" rel="noopener noreferrer">
+        <ion-icon name="logo-linkedin"></ion-icon>
+
+      </a>
+
+      <a href="https://api.whatsapp.com/send?phone=5519993515497&text=Olá, Me siga nas redes sociais!
+      www.instagram.com/jairo.work
+      www.linkedin.com/in/jairobr1986
+      " target="_blank" rel="noopener noreferrer">
+        <ion-icon name="logo-whatsapp"></ion-icon>
+
+      </a>
+
+      <a href="https://www.instagram.com/jairo.work/" target="_blank" rel="noopener noreferrer">
+        <ion-icon name="logo-instagram"></ion-icon>
+
+      </a>
+
+      <a href="https://github.com/jairobr1986" target="_blank" rel="noopener noreferrer">
+        <ion-icon name="logo-github"></ion-icon>
+
+      </a>
+
+      <!-- <ion-icon name="logo-youtube"></ion-icon> -->
+      <!-- <ion-icon name="logo-facebook"></ion-icon> -->
+      <!-- <ion-icon name="logo-twitter"></ion-icon> -->
+      <!-- <ion-icon name="logo-google"></ion-icon> -->
+      <!-- <ion-icon name="logo-google-playstore"></ion-icon> -->
+      <!-- <ion-icon name="logo-apple"></ion-icon> -->
+    </div>
+
+  </div>
+
+  <footer>
+    Feito por jairobr1986 <a href="https://www.linkedin.com/in/jairobr1986/" target="_blank"
+      rel="noopener noreferrer"><br> LinkendIn</a>
+  </footer>
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+  <script src="./assets/js/script.js"></script>
+</body>
+
+</html>
+
+
+C:\Users\jairo\OneDrive\Documentos\GitHub\araujosTransportes\assets\js\script.js
+
+function toggMode() {
+  const html = document.documentElement;
+  html.classList.toggle("light")
+
+  const img = document.querySelector("#profile img");
+
+  if (html.classList.contains('light')) {
+    img.setAttribute('src', './assets/github-jairo.jpg')
+  } else {
+    img.setAttribute('src', './assets/perfil.jpg')
+
+  }
+
+
+}
+
+
+
+C:\Users\jairo\OneDrive\Documentos\GitHub\araujosTransportes\assets\css\styles.css
+
+
+/* =========================
+   RESET BÁSICO
+========================= */
+* {
+    box-sizing: border-box;
+}
+
+/* =========================
+   LOGO
+========================= */
+.logo-site {
+    max-height: 64px;
+    width: auto;
+}
+
+@media (max-width: 640px) {
+    .logo-site {
+        max-height: 48px;
+    }
+}
+
+/* =========================
+   HERO IMAGE
+========================= */
+.hero-image {
+    width: 100%;
+    height: 260px;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Tablet */
+@media (min-width: 768px) {
+    .hero-image {
+        height: 360px;
+    }
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+    .hero-image {
+        height: 420px;
+    }
+}
+
+/* =========================
+   TOOLTIP
+========================= */
+.tooltip-container {
+    position: relative;
+    display: inline-flex;
+}
+
+.tooltip-text {
+    position: absolute;
+    bottom: 130%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #111;
+    color: #fff;
+    padding: 6px 10px;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+    z-index: 50;
+}
+
+.tooltip-container:hover .tooltip-text {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* =========================
+   ÍCONES SOCIAIS
+========================= */
+.social-icon {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background-color: #333;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.social-icon:hover {
+    background-color: #fff;
+}
+
+.social-icon.whatsapp:hover {
+    color: #25d366;
+}
+
+.social-icon.instagram:hover {
+    color: #e1306c;
+}
+
+.social-icon.facebook:hover {
+    color: #1877f2;
+}
+
+
+
+
+
+/* CSS DA PAGINA CONTATO */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --text-color: white;
+  --bg-url: url(./assets/bg-mobile.jpg);
+  --stroke-color: rgba(255, 255, 255, 0.5);
+  --surface-color: rgba(255, 255, 255, 0.05);
+  --surface-color-hover: rgba(0, 0, 0, 0.02);
+  --highlight-color: rgba(255, 255, 255, 0.2);
+  --switch-bg-url: url(./assets/moon-stars.svg);
+}
+.light {
+  --text-color: black;
+  --bg-url: url(./assets/bg-mobile-light.jpg);
+  --stroke-color: rgba(0, 0, 0, 0.5);
+  --surface-color: rgba(0, 0, 0, 0.05);
+  --surface-color-hover: rgba(0, 0, 0, 0.02);
+  --highlight-color: rgba(0, 0, 0, 0.1);
+  --switch-bg-url: url(./assets/sun.svg);
+}
+
+body {
+  background: var(--bg-url) no-repeat top center / cover;
+  height: 100vh;
+}
+
+body * {
+  font-family: "inter", sans-serif;
+  color: var(--text-color);
+}
+
+#container {
+  width: 100%;
+  max-width: 588px;
+  margin: 56px auto 0px;
+  padding: 0 24px;
+}
+
+/* Profile perfil foto */
+#profile {
+  text-align: center;
+  padding: 24px;
+}
+
+#profile img {
+  width: 112px; /* Defina uma largura */
+  /* height: 200px; Defina a mesma altura */
+  border-radius: 50%; /*Deixa a imagem redonda*/
+}
+
+#profile p {
+  font-weight: 500;
+  line-height: 24px;
+  margin-top: 8px;
+}
+
+/* switch troca modo claro / escuro */
+
+#switch {
+  position: relative;
+  width: 64px;
+
+  margin: 4px auto;
+}
+
+#switch button {
+  width: 32px;
+  height: 32px;
+  background: white var(--switch-bg-url) no-repeat center;
+  border: 0;
+  border-radius: 50%;
+
+  position: absolute;
+  top: 50%;
+  left: 0;
+  z-index: 1;
+  transform: translateY(-50%);
+
+  animation: slide-back 0.2s;
+}
+
+.light #switch button {
+  animation: slide-in 0.2s forwards;
+}
+
+#switch button:hover {
+  outline: 8px solid var(--highlight-color);
+}
+
+#switch span {
+  display: block;
+  width: 64px;
+  height: 24px;
+  background: var(--surface-color);
+  border: 1px solid var(--stroke-color);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 9999px;
+}
+
+/* links das listas */
+ul {
+  list-style: none;
+
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  padding: 24px 0;
+}
+
+ul li a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px 24px;
+
+  background: var(--surface-color);
+  border: 1px solid var(--stroke-color);
+  border-radius: 8px;
+
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+
+  text-decoration: none;
+  font-weight: 500;
+
+  transition: background 0.2s;
+}
+
+ul li a:hover {
+  background-color: var(--surface-color-hover);
+  border: 1.5px solid var(--text-color);
+}
+
+/* Social Links */
+#social-links {
+  display: flex;
+  justify-content: center;
+  /* gap: 16px; */
+
+  padding: 24px 0;
+
+  font-size: 24px;
+}
+
+#social-links a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+
+  transition: 0.2s;
+  border-radius: 50%;
+}
+
+#social-links a:hover {
+  background: var(--highlight-color);
+}
+
+footer {
+  padding: 24px;
+  text-align: center;
+}
+footer a {
+  text-decoration: none;
+}
+
+/* media queries */
+
+@media (min-width: 700px) {
+  :root {
+    --bg-url: url(./assets/bg-desktop.jpg);
+  }
+
+  .light {
+    --bg-url: url(./assets/bg-desktop-light.jpg);
+  }
+}
+
+/* animation */
+
+@keyframes slide-in {
+  from {
+    left: 0;
+  }
+  to {
+    left: 50px;
+  }
+}
+
+@keyframes slide-back {
+  from {
+    left: 50px;
+  }
+  to {
+    left: 0;
+  }
+}
+
+
+
+/* CSS DA PAGINA CONTATO */
+
+
+O que preciso ajustar para que tudo funcione corretamente?

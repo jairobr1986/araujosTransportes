@@ -1,0 +1,43 @@
+araujosTransportes/
+├── .gitattributes
+├── .gitignore
+├── ARAUJO.txt
+├── LICENSE
+├── assets
+│   ├── css
+│   │   ├── contato.css
+│   │   └── styles.css
+│   ├── img
+│   │   ├── araAzul.png
+│   │   ├── araCoca.png
+│   │   ├── araDupla.jpg
+│   │   ├── araLogo.png
+│   │   ├── araSoloAzul.jpg
+│   │   ├── araSoloCoca.jpg
+│   │   ├── bg-desktop-light.jpg
+│   │   ├── bg-desktop.jpg
+│   │   ├── bg-mobile-light.jpg
+│   │   ├── bg-mobile.jpg
+│   │   ├── github-jairo.jpg
+│   │   ├── logo.png
+│   │   ├── oficial.png
+│   │   ├── oficial2.jpg
+│   │   ├── perfil.jpg
+│   │   └── redOficial.jpg
+│   └── js
+│       └── script.js
+├── contato.html
+├── estrutura_2025-12-27_22-10-06.txt
+├── estrutura_2025-12-27_22-24-53.txt
+├── gerador_de_estrutura.py
+├── history.html
+├── index.html
+└── readme.txt
+
+
+Nossa historia, começamos pequenos e com grandes sonhos hoje temo uma frota de veículos com mais de 25 funcionários, agredados em uma multinacional e sempre buscando atender com a melhor qualidade os nossos clientes, tabalhando sempre com segurança e eficiencia.
+
+me ajude a montar um história baseada na historia acima, e crie um ligação dessa pagina:
+C:\Users\jairo\OneDrive\Documentos\GitHub\araujosTransportes\history.html
+
+com todas as outras e crie a estrututa também essa pagina historia terá duas imagens então o texto quando tiver em pc ficará do lado de uma imagem e da outra ficará do outro em celulares ficará a imagem se encaixando no texto dê o seu melhor pra mim nesse conteudo.

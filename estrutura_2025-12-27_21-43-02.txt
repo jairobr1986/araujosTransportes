@@ -1,0 +1,24 @@
+araujosTransportes/
+├── .gitattributes
+├── .gitignore
+├── ARAUJO.txt
+├── LICENSE
+├── assets
+│   ├── css
+│   │   └── styles.css
+│   ├── img
+│   │   ├── araAzul.png
+│   │   ├── araCoca.png
+│   │   ├── araDupla.jpg
+│   │   ├── araLogo.png
+│   │   ├── araSoloAzul.jpg
+│   │   ├── araSoloCoca.jpg
+│   │   ├── logo.png
+│   │   ├── oficial.png
+│   │   ├── oficial2.jpg
+│   │   └── redOficial.jpg
+│   └── js
+├── estrutura_2025-12-27_21-43-02.txt
+├── gerador_de_estrutura.py
+├── index.html
+└── readme.txt

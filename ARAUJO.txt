@@ -1,290 +1,227 @@
-ARAUJO Projeto 1500k
+/* =========================
+   VARIÁVEIS
+========================= */
+:root {
+  --red: #E53935;
+  --black: #111;
+  --gray: #333;
+  --light: #F5F5F5;
+}
 
+/* =========================
+   BASE
+========================= */
+body {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+}
 
-Ok -> Rodapé 
-Ok -> Rodapé - Responsivo
-? -> Rodapé -  Redes Sociais
+/* =========================
+   HEADER / MENU
+========================= */
+.site-header {
+  background: white;
+  border-bottom: 1px solid #eee;
+}
 
-? -> Responsividade da pagina
-? -> Responsividade
+.header-container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
-cores a ser usada
+.logo {
+  height: 50px;
+}
 
-home -> um espaço para foto da frota da transportadora
-    │   │   ├── araLogo.png logo tipo do cliente
+.menu-desktop {
+  display: flex;
+  gap: 24px;
+}
 
-sobre -> historia do cliente
+.menu-desktop a {
+  text-decoration: none;
+  color: var(--gray);
+  font-weight: 600;
+}
 
-contato -> essa pagina já tenho criada, mas aceito sugestão
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 24px;
+}
 
-trabalhe conosco -> pagina com formulario para enviar o curriculo direto no email ou no whatsApp
+/* MENU MOBILE */
+.menu-mobile {
+  display: none;
+  flex-direction: column;
+  background: white;
+  border-top: 1px solid #eee;
+}
 
-Estrutura do projeto abaixo
+.menu-mobile a {
+  padding: 12px;
+  text-decoration: none;
+  color: var(--gray);
+  border-bottom: 1px solid #eee;
+}
 
-araujosTransportes/
-├── .gitattributes
-├── .gitignore
-├── LICENSE
-├── estrutura_2025-12-24_18-41-13.txt
-└── siteAraujo
-    ├── ARAUJO.txt
-    ├── assets
-    │   ├── css
-    │   │   └── style.css
-    │   ├── img
-    │   │   ├── araLogo.png
-    │   │   ├── logo.png
-    │   │   └── oficial.png
-    │   └── js
-    ├── gerador_de_estrutura.py
-    ├── imagens sem tratamentos
-    │   ├── ChatGPT Image 19 de dez. de 2025, 13_33_05.png
-    │   ├── ChatGPT Image 19 de dez. de 2025, 13_35_09.png
-    │   ├── ChatGPT Image 19 de dez. de 2025, 13_46_30.png
-    │   ├── ChatGPT Image 19 de dez. de 2025, 13_46_36.png
-    │   ├── ChatGPT Image 19 de dez. de 2025, 13_47_25.png
-    │   ├── ChatGPT Image 19 de dez. de 2025, 13_50_23.png
-    │   ├── ChatGPT Image 19 de dez. de 2025, 13_57_31.png
-    │   ├── Gemini_Generated_Image_9ostao9ostao9ost.png
-    │   ├── Gemini_Generated_Image_fpm82hfpm82hfpm8.png
-    │   ├── Gemini_Generated_Image_mmkxogmmkxogmmkx.png
-    │   ├── Gemini_Generated_Image_pgjn9jpgjn9jpgjn.png
-    │   ├── Gemini_Generated_Image_t5jp8ut5jp8ut5jp.png
-    │   └── Gemini_Generated_Image_xgymdqxgymdqxgym.png
-    ├── index.html
-    ├── index2.html
-    └── readme.txt
+.menu-mobile.active {
+  display: flex;
+}
 
-    index atual precisa ser ajustado
-    <!DOCTYPE html>
-<html lang="pt-br">
+/* =========================
+   HERO
+========================= */
+.hero {
+  max-width: 1200px;
+  margin: auto;
+  padding: 40px 16px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  align-items: center;
+}
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ARA</title>
-    <!-- Carrega Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Configuração do Tailwind para usar a fonte Inter e cores customizadas -->
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        'primary-blue': '#1a73e8',
-                        'dark-bg': '#1f2937',
-                    },
-                    fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
-                    },
-                }
-            }
-        }
-    </script>
-    <!-- Importa Font Awesome para os ícones das redes sociais -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-        xintegrity="sha512-SnH5WK+bZxgPHs44uWIX+LLMDJzL/Kz9zzT/uQ4f7tS8z0N10+7dYg+b3Z8Q5hN9t+b3f+I5G5Z5L5L5L5L5Lw=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <style>
-        /* Estilo para a animação do tooltip */
-        .tooltip-container {
-            position: relative;
-            display: inline-block;
-        }
+.hero h1 {
+  font-size: 2.5rem;
+}
 
-        .tooltip-text {
-            visibility: hidden;
-            background-color: #333;
-            color: #fff;
-            text-align: center;
-            border-radius: 6px;
-            padding: 5px 10px;
-            position: absolute;
-            z-index: 10;
-            bottom: 125%;
-            /* Posição acima do ícone */
-            left: 50%;
-            transform: translateX(-50%);
-            opacity: 0;
-            transition: opacity 0.3s, visibility 0.3s;
-            white-space: nowrap;
-            font-size: 0.75rem;
-            /* texto pequeno */
-        }
+.hero-img {
+  width: 100%;
+  border-radius: 8px;
+}
 
-        .tooltip-container:hover .tooltip-text {
-            visibility: visible;
-            opacity: 1;
-        }
+/* BOTÕES */
+.btn-primary {
+  display: inline-block;
+  margin-top: 16px;
+  background: var(--red);
+  color: white;
+  padding: 12px 24px;
+  border-radius: 6px;
+  text-decoration: none;
+}
 
-        /* Estilo base do ícone com hover de cor */
-        .social-icon {
-            transition: all 0.3s ease-in-out;
-            @apply text-white bg-gray-700 hover:scale-110 shadow-lg p-3 rounded-full;
-        }
+.btn-whatsapp {
+  display: inline-flex;
+  gap: 8px;
+  align-items: center;
+  background: #25d366;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 6px;
+  text-decoration: none;
+}
 
-        /* Cores específicas no hover para visual moderno */
-        .fa-facebook-f:hover {
-            color: #1877f2;
-            @apply bg-white;
-        }
+/* =========================
+   SEÇÕES
+========================= */
+.section {
+  padding: 60px 16px;
+  text-align: center;
+}
 
-        .fa-whatsapp:hover {
-            color: #25d366;
-            @apply bg-white;
-        }
+.section.gray {
+  background: var(--light);
+}
 
-        .fa-instagram:hover {
-            color: #E1306C;
-            @apply bg-white;
-        }
+/* =========================
+   FOOTER
+========================= */
+.footer {
+  background: var(--black);
+  color: white;
+  padding: 32px 16px;
+}
 
-        .fa-linkedin-in:hover {
-            color: #0A66C2;
-            @apply bg-white;
-        }
-    </style>
-</head>
+.footer-content {
+  max-width: 1200px;
+  margin: auto;
+  text-align: center;
+}
 
-<body class="min-h-screen flex flex-col font-sans bg-gray-100">
+.footer-logo {
+  height: 50px;
+  margin-bottom: 16px;
+}
 
-    <!-- Conteúdo Principal Mockup para Visualização -->
-    <main class="flex-grow p-8">
-        <h1 class="text-3xl font-bold text-gray-800 mb-4">Seção Principal do Site</h1>
-        <p class="text-gray-600">Este é um conteúdo de exemplo para demonstrar o rodapé na parte inferior da página.</p>
-        <!-- Adiciona um pouco de espaço para forçar o footer para baixo em telas maiores -->
-        <div class="h-64 sm:h-96"></div>
-    </main>
+/* =========================
+   ÍCONES SOCIAIS
+========================= */
+.socials {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin: 16px 0;
+}
 
-    <!-- INÍCIO DO RODAPÉ (FOOTER) -->
-    <footer class="bg-dark-bg text-white py-10 shadow-inner mt-auto">
-        <div class="container mx-auto px-4">
+.social-icon {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: #333;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
 
-            <!-- Linha principal do rodapé (Responsivo: Centralizado em móvel, com espaço em desktop) -->
-            <div
-                class="flex flex-col md:flex-row justify-between items-center text-center md:text-left border-b border-gray-700 pb-6 mb-6">
+.social-icon:hover {
+  background: white;
+}
 
-                <!-- Logo ou Nome da Empresa -->
-                <div class="mb-4 md:mb-0">
-                    <h2 class="text-2xl font-extrabold text-primary-blue">
-                        <i class="fas fa-code text-white mr-2"></i>Seu Projeto Web
-                    </h2>
-                    <p class="text-sm text-gray-400 mt-1">Conectando você ao mundo digital.</p>
-                </div>
+.social-icon.whatsapp:hover { color: #25d366; }
+.social-icon.instagram:hover { color: #e1306c; }
+.social-icon.facebook:hover { color: #1877f2; }
 
-                <!-- Ícones de Redes Sociais (Obrigatório: Centralização e espaçamento responsivo) -->
-                <div class="flex space-x-6 justify-center">
-
-                    <!-- Facebook -->
-                    <div class="tooltip-container">
-                        <a href="https://www.facebook.com/seuperfil" target="_blank" aria-label="Acesse nosso Facebook"
-                            class="social-icon">
-                            <i class="fab fa-facebook-f text-lg"></i>
-                        </a>
-                        <span class="tooltip-text">Curta nossa página no Facebook!</span>
-                    </div>
-
-                    <!-- WhatsApp -->
-                    <div class="tooltip-container">
-                        <a href="https://wa.me/5511999999999" target="_blank" aria-label="Fale conosco pelo WhatsApp"
-                            class="social-icon">
-                            <i class="fab fa-whatsapp text-lg"></i>
-                        </a>
-                        <span class="tooltip-text">Envie uma mensagem via WhatsApp</span>
-                    </div>
-
-                    <!-- Instagram -->
-                    <div class="tooltip-container">
-                        <a href="https://www.instagram.com/seuperfil" target="_blank" aria-label="Siga-nos no Instagram"
-                            class="social-icon">
-                            <i class="fab fa-instagram text-lg"></i>
-                        </a>
-                        <span class="tooltip-text">Acompanhe nossas novidades no Instagram</span>
-                    </div>
-
-                    <!-- LinkedIn -->
-                    <div class="tooltip-container">
-                        <a href="https://www.linkedin.com/in/seuperfil" target="_blank"
-                            aria-label="Conecte-se conosco no LinkedIn" class="social-icon">
-                            <i class="fab fa-linkedin-in text-lg"></i>
-                        </a>
-                        <span class="tooltip-text">Conecte-se no nosso LinkedIn profissional</span>
-                    </div>
-
-                </div>
-            </div>
-
-            <!-- Direitos Autorais e Navegação Rápida (Exemplo) -->
-            <div class="text-center text-gray-500 text-sm">
-                <p>&copy; 2025 Seu Projeto Web. Todos os direitos reservados.</p>
-                <div class="mt-2 space-x-4">
-                    <a href="#" class="hover:text-primary-blue transition">Política de Privacidade</a>
-                    <span class="text-gray-600">|</span>
-                    <a href="#" class="hover:text-primary-blue transition">Termos de Uso</a>
-                </div>
-            </div>
-
-        </div>
-    </footer>
-    <!-- FIM DO RODAPÉ -->
-
-</body>
-
-</html>
-
-css atual precisa ser ajustado
-/* Tooltip */
+/* =========================
+   TOOLTIP
+========================= */
 .tooltip-container {
-    position: relative;
-    display: inline-block;
+  position: relative;
 }
 
 .tooltip-text {
-    visibility: hidden;
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    border-radius: 6px;
-    padding: 5px 10px;
-    position: absolute;
-    z-index: 10;
-    bottom: 125%;
-    left: 50%;
-    transform: translateX(-50%);
-    opacity: 0;
-    transition: opacity 0.3s, visibility 0.3s;
-    white-space: nowrap;
-    font-size: 0.75rem;
+  position: absolute;
+  bottom: 130%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #111;
+  color: #fff;
+  padding: 6px 10px;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease;
 }
 
 .tooltip-container:hover .tooltip-text {
-    visibility: visible;
-    opacity: 1;
+  opacity: 1;
+  visibility: visible;
 }
 
-/* Ícones sociais */
-.social-icon {
-    transition: all 0.3s ease-in-out;
-}
+/* =========================
+   RESPONSIVO
+========================= */
+@media (max-width: 768px) {
+  .menu-desktop {
+    display: none;
+  }
 
-.fa-facebook-f:hover {
-    color: #1877f2;
-    background: white !important;
-}
+  .menu-toggle {
+    display: block;
+  }
 
-.fa-whatsapp:hover {
-    color: #25d366;
-    background: white !important;
+  .hero {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
 }
-
-.fa-instagram:hover {
-    color: #E1306C;
-    background: white !important;
-}
-
-.fa-linkedin-in:hover {
-    color: #0A66C2;
-    background: white !important;
-}
-
-Apenas lembrando que o site é estatico e tem de ter muita responsividade, SEO, e acessibilidade para todos os tipos de usuários, funcionar em celulares, tablets e pcs.
