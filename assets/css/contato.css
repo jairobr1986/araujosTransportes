@@ -7,13 +7,13 @@
 }
 
 :root {
-    --text-color: white;
+    --text-color: rgb(19, 5, 5);
     /* Caminho corrigido para subir um nível (..) e entrar em img/ */
     --bg-url: url(../img/bg-mobile.jpg); 
     --stroke-color: rgba(255, 255, 255, 0.5);
-    --surface-color: rgba(255, 255, 255, 0.05);
-    --surface-color-hover: rgba(0, 0, 0, 0.02);
-    --highlight-color: rgba(255, 255, 255, 0.2);
+    --surface-color: rgba(218, 94, 94, 0.75);
+    --surface-color-hover: rgba(0, 0, 0, 0.);
+    --highlight-color: rgba(255, 255, 255, 0.75);
     /* Assumindo que você tem moon-stars.svg em assets/img/ */
     --switch-bg-url: url(../img/moon-stars.svg); 
 }
