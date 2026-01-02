@@ -9,7 +9,7 @@
 :root {
     --text-color: rgb(19, 5, 5);
     /* Caminho corrigido para subir um nível (..) e entrar em img/ */
-    --bg-url: url(../img/bg-mobile.jpg); 
+    --bg-url: url(../img/bg-mobile-light.jpg); 
     --stroke-color: rgba(255, 255, 255, 0.5);
     --surface-color: rgba(218, 94, 94, 0.75);
     --surface-color-hover: rgba(0, 0, 0, 0.);
@@ -20,7 +20,7 @@
 .light {
     --text-color: black;
     /* Caminho corrigido para subir um nível (..) e entrar em img/ */
-    --bg-url: url(../img/bg-mobile-light.jpg);
+    --bg-url: url(../img/bg-mobile.jpg);
     --stroke-color: rgba(0, 0, 0, 0.5);
     --surface-color: rgba(0, 0, 0, 0.05);
     --surface-color-hover: rgba(0, 0, 0, 0.02);
