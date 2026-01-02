@@ -6,7 +6,7 @@ function toggMode() {
 
     if (html.classList.contains('light')) {
         // Caminho corrigido para assets/img/
-        img.setAttribute('src', './assets/img/github-jairo.jpg') 
+        img.setAttribute('src', './assets/img/araAzul.png') 
     } else {
         // Caminho corrigido para assets/img/
         img.setAttribute('src', './assets/img/perfil.jpg') 
